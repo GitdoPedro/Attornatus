@@ -1,8 +1,8 @@
 package com.example.Attornatus.controllers;
 
 
-import com.example.Attornatus.dtos.PessoaRequest;
-import com.example.Attornatus.dtos.PessoaResponse;
+import com.example.Attornatus.dtos.pessoa.PessoaRequest;
+import com.example.Attornatus.dtos.pessoa.PessoaResponse;
 import com.example.Attornatus.services.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

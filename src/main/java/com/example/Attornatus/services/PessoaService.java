@@ -1,7 +1,7 @@
 package com.example.Attornatus.services;
 
-import com.example.Attornatus.dtos.PessoaRequest;
-import com.example.Attornatus.dtos.PessoaResponse;
+import com.example.Attornatus.dtos.pessoa.PessoaRequest;
+import com.example.Attornatus.dtos.pessoa.PessoaResponse;
 import com.example.Attornatus.mappers.PessoaMapper;
 import com.example.Attornatus.models.Pessoa;
 import com.example.Attornatus.repositories.PessoaRepository;
@@ -35,6 +35,7 @@ public class PessoaService {
     //Criar uma pessoa
     public ResponseEntity<String> addPessoa(PessoaRequest request) {
         Pessoa pessoaCadastrada = mapper.map(request);
+        mapper.updateFromRequest(request,pessoaCadastrada);
         repository.save(pessoaCadastrada);
         return ResponseEntity.created(URI.create("")).body("Pessoa cadastrado com sucesso!");
     }

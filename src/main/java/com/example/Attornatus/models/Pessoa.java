@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "pessoa")
@@ -16,6 +17,12 @@ public class Pessoa {
 
     private LocalDate dataNascimento;
 
+    @OneToMany(mappedBy = "pessoa")
+    private List<Endereco> enderecos;
+
+    public Integer getId() {
+        return id;
+    }
 
     public String getNomeCompleto() {
         return nomeCompleto;

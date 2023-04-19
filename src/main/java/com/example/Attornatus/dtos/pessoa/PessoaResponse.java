@@ -1,4 +1,4 @@
-package com.example.Attornatus.dtos;
+package com.example.Attornatus.dtos.pessoa;
 
 import java.time.LocalDate;
 
